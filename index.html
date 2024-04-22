@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.122.0">
-    <title>Album example · Bootstrap v5.3</title>
+    <title>Perfiles Estudiantiles</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
 
@@ -94,6 +94,33 @@
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
       }
+
+      /* Estilo para la imagen de fondo */
+    .seccion-con-fondo {
+      background-image: url('banner3.jpg');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 50px 0; /* Ajusta el espacio interno según necesites */
+      color: black; /* Color de texto más oscuro */
+      font-weight: bold; /* Texto en negrita */
+    }
+
+    /* Estilo para el texto dentro de la sección */
+    .seccion-con-fondo p {
+      font-size: 1.6rem; /* Tamaño del texto */
+      font-weight: 500; /* Texto en negrita */
+    }
+
+    .seccion-con-fondo h1 {
+      color: black; /* Color de texto más oscuro */
+      font-size: 4rem; /* Tamaño del título */
+    }
+
+    .texto-inmutable {
+      color: rgba(33, 37, 41, 0.75); /* Color de texto inmutable */
+    }
+
     </style>
 
     
@@ -156,15 +183,15 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-8 col-md-7 py-4">
-          <h4>About</h4>
-          <p class="text-body-secondary">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+          <h4>Acerca de nosotros</h4>
+          <p class="text-body-secondary" >Esta página fue creada con la colaboración de los compañeros del curso 4to Software, se realizó con el fin de mejorar el aprendizaje sobre repositorios remotos y software de control de versiones.</p>
         </div>
         <div class="col-sm-4 offset-md-1 py-4">
-          <h4>Contact</h4>
+          <h4>Contacto</h4>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-            <li><a href="#" class="text-white">Like on Facebook</a></li>
-            <li><a href="#" class="text-white">Email me</a></li>
+            <li><a href="#" class="text-white">Twitter</a></li>
+            <li><a href="#" class="text-white">Facebook</a></li>
+            <li><a href="#" class="text-white">Email</a></li>
           </ul>
         </div>
       </div>
@@ -185,17 +212,17 @@
 
 <main>
 
-  <section class="py-5 text-center container">
+  <section class="py-5 text-center container seccion-con-fondo">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light"> 4to Software</h1>
-        <p class="lead text-body-secondary">Los ingenieros de software se especializan en el diseño y el desarrollo de aplicaciones
+        <p class="texto-inmutable">Los ingenieros de software se especializan en el diseño y el desarrollo de aplicaciones
           software, y están formados principalmente en matemáticas y Ciencias
           Computacionales; y los conocimientos y habilidades adquiridas a partir de esta
           formación los aplican en el diseño, construcción y despliegue de esas aplicaciones</p>
         <p>
-          <a href="#" class="btn btn-primary my-2">Conocer más</a>
-          <a href="#" class="btn btn-secondary my-2">Contactanós</a>
+          <a href="#integrantes" class="btn btn-primary my-2">Conocer más</a>
+          <a href="#" id="activarBoton" class="btn btn-secondary my-2">Contáctanos</a>
         </p>
       </div>
     </div>
@@ -203,7 +230,8 @@
 
   <div class="album py-5 bg-body-tertiary">
     <div class="container">
-
+      <div id="integrantes"><h1 class="fw-light" style="text-align: center; padding-bottom: 40px;">Integrantes</h1></div>
+      
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col">
           <div class="card shadow-sm">
@@ -272,13 +300,18 @@
 <footer class="text-body-secondary py-5">
   <div class="container">
     <p class="float-end mb-1">
-      <a href="#">Back to top</a>
+      <a href="#">Volver a Inicio</a>
     </p>
-    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="./getting-started/introduction/">getting started guide</a>.</p>
+    <p class="mb-1">Perfiles &copy; 4to Software, creado para mejorar el aprendizaje</p>
   </div>
 </footer>
 <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById('activarBoton').addEventListener('click', function() {
+    // Simula el clic en el botón de navegación
+    document.querySelector('.navbar-toggler').click();
+  });
+</script>
 
     </body>
 </html>
